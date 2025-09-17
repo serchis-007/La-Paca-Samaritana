@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/@codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu | CodingNepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linking Google fonts for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="site-nav">
+      <button class="sidebar-toggle">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
+    </nav>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar collapsed">
+        <!-- Sidebar header -->
+        <div class="sidebar-header">
+          <img src="Logo página web2.png" alt="usuario" class="header-logo" />
+          <button class="sidebar-toggle">
+            <span class="material-symbols-rounded">chevron_left</span>
+          </button>
+        </div>
+        <div class="sidebar-content">
+          <!-- Search Form -->
+          <form action="#" class="search-form">
+            <span class="material-symbols-rounded">search</span>
+            <input type="search" placeholder="Search..." required />
+          </form>
+          <!-- Sidebar Menu -->
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="prueba.html" class="menu-link active">
+                <span  ><img src="home.svg" alt="Home" style="width: 1.2rem;
+            margin: 0.2rem;"> </span>
+                <span class="menu-label">Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="vestidos.html" class="menu-link">
+                <span class="material-symbols-rounded"><img src="dress.svg" alt="Vestido" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Vestidos</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="camisa.html" class="menu-link">
+                <span class="material-symbols-rounded"><img src="camisa.svg" alt="Camisas" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Camisas</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="pantalon.html" class="menu-link">
+                <span class="material-symbols-rounded"><img src="pantalon.svg" alt="pantalon" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Pantalones</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="material-symbols-rounded"><img src="zapatos.svg" alt="Zapatos" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Calzado </span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="material-symbols-rounded"><img src="sporty.svg" alt="Ropa deportiva" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Sporty</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="material-symbols-rounded">settings</span>
+                <span class="menu-label">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+          <button class="theme-toggle">
+            <div class="theme-label">
+              <span class="theme-icon material-symbols-rounded">dark_mode</span>
+              <span class="theme-text">Dark Mode</span>
+            </div>
+            <div class="theme-toggle-track">
+              <div class="theme-toggle-indicator"></div>
+            </div>
+          </button>
+        </div>
+      </aside>
+      <!-- Site main content -->
+      <div class="main-content">
+        <img src="fondo1.png"  style="width: 100%; height: 200px; object-fit: cover;" class="fondo1">
+        <br>
+        <br>
+       <div class="info-cards">
+  <!-- Card 1: Quiénes somos -->
+  <div class="card">
+    <div class="card-image">
+      <img src="Logo página web2.png" alt="Imagen Quiénes Somos">
+    </div>
+    <div class="card-content">
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        Bienvenido a <strong>La Paca Samaritana</strong>, donde la moda se une a la accesibilidad. Somos una distribuidora de ropa clasificada de calidad premium para toda la familia.
+        Nuestra historia comenzó con la venta de pacas de 100 lb, pero hoy brindamos una experiencia única en nuestra boutique de Asunción Mita, Jutiapa.
+      </p>
+    </div>
+  </div>
+
+  
+
+  <!-- Card 2: Sobre nuestros productos -->
+  <div class="card">
+    <div class="card-image">
+      <img src="construccion.jpg" alt="Imagen Productos">
+    </div>
+    <div class="card-content">
+      <h2>Sobre nuestros productos</h2>
+      <p>
+        Ofrecemos desde vestidos elegantes y pijamas cómodas, hasta ropa casual y deportiva para toda la familia.
+        Nuestro compromiso es brindar <strong>calidad</strong> y <strong>accesibilidad</strong> con honestidad y transparencia. Viste con estilo sin gastar de más.
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+  
+    <script src="prueba.js"></script>
+
+      <footer style="background-color: #202E57; color: #FDFDF8; padding: 40px 0; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around;">
+      
+      <!-- Redes Sociales -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">Síguenos</h3>
+        <div>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-facebook-f"></i>Facebook</a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Soporte -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">Soporte</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><a href="#" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Centro de ayuda</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Contacto</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Extras (Opcional o duplicado de redes) -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">Información</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><a href="#" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Política de privacidad</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Términos y condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 15px; font-size: 14px; color: #777;">
+      © 2025 Paca Samaritanas. Todos los derechos reservados.
+    </div>
+  </footer>
+  </body>
+</html>

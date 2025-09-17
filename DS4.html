@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/@codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu | CodingNepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linking Google fonts for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="site-nav">
+      <button class="sidebar-toggle">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
+    </nav>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar collapsed">
+        <!-- Sidebar header -->
+        <div class="sidebar-header">
+          <img src="Logo página web2.png" alt="usuario" class="header-logo" />
+          <button class="sidebar-toggle">
+            <span class="material-symbols-rounded">chevron_left</span>
+          </button>
+        </div>
+        <div class="sidebar-content">
+          <!-- Search Form -->
+          <form action="#" class="search-form">
+            <span class="material-symbols-rounded">search</span>
+            <input type="search" placeholder="Search..." required />
+          </form>
+          <!-- Sidebar Menu -->
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="index.html" class="menu-link ">
+                <span  ><img src="home.svg" alt="Home" style="width: 1.2rem;
+            margin: 0.2rem;"> </span>
+                <span class="menu-label">Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="vestidos.html" class="menu-link ">
+                <span class="material-symbols-rounded"><img src="dress.svg" alt="Vestido" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Vestidos</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="camisa.html" class="menu-link ">
+                <span class="material-symbols-rounded"><img src="camisa.svg" alt="Camisas" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Camisas</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="pantalon.html" class="menu-link">
+                <span class="material-symbols-rounded"><img src="pantalon.svg" alt="pantalon" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Pantalones</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="zapatos.html" class="menu-link">
+                <span class="material-symbols-rounded"><img src="zapatos.svg" alt="Zapatos" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Calzado </span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="sporty_W.html" class="menu-link active">
+                <span class="material-symbols-rounded"><img src="sporty.svg" alt="Ropa deportiva" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">Sporty</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="chat2.html" class="menu-link">
+                <span class="material-symbols-rounded"><img src="mensaje.png" alt="Zapatos" style="width: 1.2rem; margin: 0,2rem;"></span>
+                <span class="menu-label">chat</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+          <button class="theme-toggle">
+            <div class="theme-label">
+              <span class="theme-icon material-symbols-rounded">dark_mode</span>
+              <span class="theme-text">Dark Mode</span>
+            </div>
+            <div class="theme-toggle-track">
+              <div class="theme-toggle-indicator"></div>
+            </div>
+          </button>
+        </div>
+      </aside>
+      <!-- Site main content -->
+      <div class="main-content">
+
+  <section class="main-product-section">
+  <!-- Carta principal -->
+  <div class="featured-product-card">
+    <div class="featured-left">
+      <img src="sporty_W4.jpg" alt="Vestido Rojo Floral">
+      <a class="price" href="chat.html">Comprar.</a>
+    </div>
+    <div class="featured-right">
+      <h2>Juego licra</h2>
+      <p class="description">
+        Conjunto de licra elástica que se adapta al cuerpo como una segunda piel. Ideal para yoga, pilates o rutinas intensas. Comodidad y estilo en cada movimiento.
+        <strong>Talla:</strong><em>S/M/L</em><br>
+        <strong>Precio:</strong> Q55.00
+        <strong>Código:</strong> 7004
+      </p>
+      <div class="icons">
+        <!-- Puedes usar íconos de Font Awesome o Boxicons -->
+        <i class="bx bxs-heart"></i>
+        <i class="bx bx-share-alt"></i>
+        <i class="bx bx-cart-alt"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cartas pequeñas -->
+  <style>
+.small-card .button {
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  background-color: #662681;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none; /* quita subrayado del link */
+  display: inline-block; /* se ve como botón */
+  text-align: center;
+}
+
+.small-card .button:hover {
+  background-color: #4a1c5d; /* tono más oscuro al pasar el mouse */
+}
+</style>
+
+<div class="small-products">
+  <div class="small-card">
+    <img src="sporty_W1.jpg" alt="Vestido Azul">
+    <h4>jogger vino</h4>
+    <p>Q55.00</p>
+    <a class="button" href="DS1.html">Ver más</a>
+  </div>
+  <div class="small-card">
+    <img src="sporty_W2.jpg" alt="Vestido Beige">
+    <h4>sudadero gris y short negro</h4>
+    <p>Q55.00</p>
+    <a class="button" href="DS2.html">Ver más</a>
+  </div>
+  <div class="small-card">
+    <img src="sporty_W5.png" alt="Vestido Juvenil">
+    <h4>Jogger nike</h4>
+    <p>Q55.00</p>
+    <a class="button" href="DS5.html">Ver más</a>
+  </div>
+</div>
+
+</section>
+
+    <script src="prueba.js"></script>
+   <footer style="background-color: #202E57; color: #FDFDF8; padding: 40px 0; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around;">
+      
+      <!-- Redes Sociales -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">Síguenos</h3>
+        <div>
+          <a href="https://www.facebook.com/share/1B8jt5Nxsf/" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-facebook-f"></i>Facebook</a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Soporte -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">contáctanos</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><a href="https://www.facebook.com/share/1B8jt5Nxsf/" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Tel: 5575-5621</a></li>
+          <li style="margin-bottom: 10px;"><a href="http
+            s://mail.google.com/mail/u/0/#inbox" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">importadorasamaritana502@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <!-- Extras (Opcional o duplicado de redes) -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">Información</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><a href="https://maps.app.goo.gl/7ZX8mgBHKYp1Ffvt6" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">7ma calle 32-32 zona 11 ResidenCiales Las Azaleas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 15px; font-size: 14px; color: #777;">
+      © 2025 Paca Samaritanas.
+      created by Sergio V & Natalia H G5/C5.
+    </div>
+  </footer>
+
+  </body>
+</html>

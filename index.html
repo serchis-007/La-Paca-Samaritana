@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paca Samaritana</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    /* ===== ESTILOS GENERALES ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+    }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #202E57;
+      margin: 50px 0 30px;
+      font-size: 2rem;
+    }
+    .section-divider {
+      width: 80%;
+      max-width: 900px;
+      margin: 40px auto;
+      border: none;
+      border-top: 2px solid #ddd;
+    }
+
+    /* ===== CARRUSEL ===== */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+    .carousel img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      position: absolute;
+      top: 0; left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel img.active { opacity: 1; }
+    @media(max-width: 768px) {
+      .carousel { height: 220px; }
+      .carousel img { height: 220px; }
+    }
+
+/* ===== SECCIÓN INFO ===== */
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.info-block {
+  text-align: center;
+  padding: 15px;
+ 
+  border-radius: 8px;
+}
+
+.info-block h3 {
+  color: #202E57;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #01A595;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.info-block p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsividad */
+@media(max-width: 992px) {
+  .info-section { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width: 600px) {
+  .info-section { grid-template-columns: 1fr; }
+}
+
+
+    /* ===== VALORES ===== */
+    .valores-section {
+      background: #f4f8fb;
+      padding: 50px 20px;
+    }
+    .valores-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .valor-card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .valor-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .valor-card span.material-symbols-rounded {
+      font-size: 40px;
+      color: #01A595;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .valor-card h3 {
+      color: #202E57;
+      margin-bottom: 8px;
+    }
+    .valor-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      max-width: 800px;
+      margin: 50px auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+    }
+    .faq-question {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 18px;
+      padding: 15px;
+      color: #1d1d1b;
+      cursor: pointer;
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 15px 15px 15px;
+      color: #878787;
+      font-size: 16px;
+    }
+    .faq-item.active .faq-answer { display: block; }
+    
+    .logo {
+      position: relative;
+      z-index: 20px;
+      width: 300px;
+      height: auto;
+      top: -320px;
+      left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== NAVBAR SUPERIOR ===== -->
+  <nav class="site-nav">
+    <button class="sidebar-toggle">
+      <span class="material-symbols-rounded">menu</span>
+    </button>
+  </nav>
+
+  <div class="container">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar collapsed">
+      <div class="sidebar-header">
+        <img src="Logo página web2.png" alt="usuario" class="header-logo" />
+        <button class="sidebar-toggle">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+      </div>
+      <div class="sidebar-content">
+        <form action="#" class="search-form">
+          <span class="material-symbols-rounded">search</span>
+          <input type="search" placeholder="Buscar..." required />
+        </form>
+        <ul class="menu-list">
+          <li class="menu-item"><a href="index.html" class="menu-link active"><span><img src="home.svg" style="width:1.2rem;"></span><span class="menu-label">Home</span></a></li>
+          <li class="menu-item"><a href="vestidos.html" class="menu-link"><span><img src="dress.svg" style="width:1.2rem;"></span><span class="menu-label">Vestidos</span></a></li>
+          <li class="menu-item"><a href="camisa.html" class="menu-link"><span><img src="camisa.svg" style="width:1.2rem;"></span><span class="menu-label">Camisas</span></a></li>
+          <li class="menu-item"><a href="pantalon.html" class="menu-link"><span><img src="pantalon.svg" style="width:1.2rem;"></span><span class="menu-label">Pantalones</span></a></li>
+          <li class="menu-item"><a href="zapatos.html" class="menu-link"><span><img src="zapatos.svg" style="width:1.2rem;"></span><span class="menu-label">Calzado</span></a></li>
+          <li class="menu-item"><a href="sporty_W.html" class="menu-link"><span><img src="sporty.svg" style="width:1.2rem;"></span><span class="menu-label">Sporty</span></a></li>
+          <li class="menu-item"><a href="chat2.html" class="menu-link"><span><img src="mensaje.png" style="width:1.2rem;"></span><span class="menu-label">Chat</span></a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <button class="theme-toggle">
+          <div class="theme-label">
+            <span class="theme-icon material-symbols-rounded">dark_mode</span>
+            <span class="theme-text">Dark Mode</span>
+          </div>
+          <div class="theme-toggle-track"><div class="theme-toggle-indicator"></div></div>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+      <!-- Carrusel -->
+      <div class="carousel">
+        <img src="carrusel1.jpg" class="active" alt="Imagen 1">
+        <img src="carrusel2.jpg" alt="Imagen 2">
+        <img src="carrusel3.jpg" alt="Imagen 3">
+      </div>
+      <img  class="logo" src="logo-pagina2.png" alt="logo paca">
+
+      <!-- Sobre Nosotros -->
+      <h2>Sobre Nosotros</h2>
+      <div class="info-section">
+        <div class="info-block"><h3>Visión</h3><p>Ser líderes en distribución de ropa accesible y de calidad, marcando tendencia en moda sostenible.</p></div>
+        <div class="info-block"><h3>Misión</h3><p>Ofrecer ropa de calidad a precios accesibles, cuidando el servicio y la satisfacción de nuestros clientes.</p></div>
+        <div class="info-block"><h3>Quiénes Somos</h3><p>Somos una empresa comprometida con brindar moda accesible para toda la familia con atención personalizada.</p></div>
+        <div class="info-block"><h3>Productos</h3><p>Contamos con ropa clasificada de primera, calzado y accesorios ideales para cada ocasión.</p></div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- Valores -->
+      <h2>Nuestros Valores</h2>
+      <div class="valores-section">
+        <div class="valores-grid">
+          <div class="valor-card"><span class="material-symbols-rounded">verified</span><h3>Honestidad</h3><p>Actuamos con transparencia en cada paso de nuestro trabajo.</p></div>
+          <div class="valor-card"><span class="material-symbols-rounded">favorite</span><h3>Fidelidad</h3><p>Creamos relaciones duraderas basadas en la confianza mutua.</p></div>
+          <div class="valor-card"><span class="material-symbols-rounded">visibility</span><h3>Transparencia</h3><p>Ofrecemos información clara sobre nuestros procesos y productos.</p></div>
+          <div class="valor-card"><span class="material-symbols-rounded">diversity_3</span><h3>Respeto</h3><p>Valoramos a cada cliente y colaborador por igual.</p></div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- FAQ -->
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq">
+        <div class="faq-item"><button class="faq-question">¿Cómo puedo hacer un pedido?</button><div class="faq-answer">Puedes hacerlo en línea o visitando nuestra tienda física.</div></div>
+        <div class="faq-item"><button class="faq-question">¿Qué métodos de pago aceptan?</button><div class="faq-answer">Aceptamos pagos en efectivo, tarjeta y transferencias bancarias.</div></div>
+        <div class="faq-item"><button class="faq-question">¿Hacen envíos a todo el país?</button><div class="faq-answer">Sí, realizamos envíos a nivel nacional con empresas de paquetería confiables.</div></div>
+        <div class="faq-item"><button class="faq-question">¿La ropa es nueva o de segunda?</button><div class="faq-answer">Manejamos ropa clasificada de segunda mano en excelente estado.</div></div>
+      </div>
+    </div>
+  </div>
+
+ <footer style="background-color: #202E57; color: #FDFDF8; padding: 40px 0; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around;">
+      
+      <!-- Redes Sociales -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">Síguenos</h3>
+        <div>
+          <a href="https://www.facebook.com/share/1B8jt5Nxsf/" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-facebook-f"></i>Facebook</a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="margin: 0 10px; color: #aaa; font-size: 20px;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Soporte -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">contáctanos</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><a href="https://www.facebook.com/share/1B8jt5Nxsf/" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">Tel: 5575-5621</a></li>
+          <li style="margin-bottom: 10px;"><a href="https://mail.google.com/mail/u/0/#inbox" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">importadorasamaritana502@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <!-- Extras (Opcional o duplicado de redes) -->
+      <div style="flex: 1 1 200px; margin: 10px;">
+        <h3 style="color: #fff; margin-bottom: 15px;">Información</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><a href="https://maps.app.goo.gl/7ZX8mgBHKYp1Ffvt6" style="text-decoration: none; color: #cecece;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#aaa'">7ma calle 32-32 zona 11 ResidenCiales Las Azaleas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 15px; font-size: 14px; color: #777;">
+      © 2025 Paca Samaritanas.
+      created by Sergio V & Natalia H G5/C5.
+    </div>
+  </footer>
+  </body>
+</html>
+
+  <!-- ===== JS ===== -->
+  <script src="prueba.js"></script>
+  <script>
+    // Carrusel automático
+    const slides = document.querySelectorAll('.carousel img');
+    let idx = 0;
+    setInterval(()=>{
+      slides[idx].classList.remove('active');
+      idx = (idx+1) % slides.length;
+      slides[idx].classList.add('active');
+    }, 4000);
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        btn.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
